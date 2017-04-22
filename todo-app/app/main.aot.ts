@@ -3,4 +3,5 @@ import { platformNativeScript } from "nativescript-angular/platform-static";
 
 import { AppModuleNgFactory } from "./app.module.ngfactory";
 
-platformNativeScript().bootstrapModuleFactory(AppModuleNgFactory);
+const options = { startPageActionBarHidden: true, bootInExistingPage: false };
+platformNativeScript(options).bootstrapModuleFactory(AppModuleNgFactory);

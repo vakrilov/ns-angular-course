@@ -1,0 +1,23 @@
+<StackLayout margin="12">
+
+    <!-- Header -->
+    <Label text="ToDo" class="header"></Label>
+
+    <!-- Add todo -->
+    <GridLayout rows="auto" columns="* auto">
+        <TextField hint="Add a todo..." [(ngModel)]="currentTodo"></TextField>
+
+        <Button col="1" text="+" (tap)="addTodo()" class="add"></Button>
+    </GridLayout>
+
+    <!-- List -->
+    <GridLayout *ngFor="let todo of todos" 
+        columns="auto * auto" rows="auto" 
+        [class.completed]="todo.completed" 
+        [class.pending]="!todo.completed">
+
+        <Button col="0" class="round" [text]="todo.completed ? '✓' : null" (tap)="toggleTodo(todo)"></Button>
+
+        <Label col="1" [text]="todo.text" textWrap="true"></Label>
+    </GridLayout>
+</StackLayout>

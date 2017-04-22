@@ -9,4 +9,57 @@ In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
-@import 'nativescript-theme-core/css/core.light.css';
+
+.header {
+  font-size: 60;
+  text-align: center;
+  margin: 12;
+}
+
+TextField {
+  font-size: 24;
+  vertical-align: center;
+}
+
+Label {
+  font-size: 20;
+  color: #284848;
+  margin: 12;
+}
+
+Button {
+  width: 40;
+  height: 40;
+  padding: 0;  
+  font-size: 20;    
+}
+
+.round {
+  border-width: 2;
+  border-radius: 20;
+}
+
+.add {
+  color: white;
+  font-weight: bold;
+  border-radius: 4;
+  background-color: #5CA793;
+  border-color: #5CA793;    
+}
+
+.pending > Button {
+  border-color: #284848;
+} 
+
+.completed > Button {
+  color: #5DC2AF;
+  border-color: #5DC2AF;
+}
+
+.completed > Label {
+  font-size: 20;  
+  text-decoration: line-through;
+  color: gray;
+  margin: 12;  
+}
+
