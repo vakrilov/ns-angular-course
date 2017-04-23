@@ -3,6 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { AppComponent } from "./app.component";
 import { TodoService } from "./todo.service";
+import { Logger } from "./logger.service";
 import { TodoComponent } from "./todo.component";
 
 @NgModule({
@@ -18,7 +19,7 @@ import { TodoComponent } from "./todo.component";
     declarations: [ AppComponent, TodoComponent ],
 
     // Service Providers
-    providers: [ TodoService ],
+    providers: [ TodoService, Logger ],
 
     // Export components, directives and pipes
     exports: [],
