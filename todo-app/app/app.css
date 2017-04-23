@@ -43,6 +43,11 @@ Button {
   color: white;
   font-weight: bold;
   border-radius: 4;
+  background-color: lightgray;
+  border-color: lightgray;    
+}
+
+.add-active {
   background-color: #5CA793;
   border-color: #5CA793;    
 }
