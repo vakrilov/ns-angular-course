@@ -3,5 +3,5 @@
 
     <Button col="0" class="round" [text]="todo.completed ? '✓' : null" (tap)="onTap()"></Button>
 
-    <Label col="1" [text]="todo.text" textWrap="true"></Label>
+    <Label col="1" [text]="todo.text | motivator: shouldMotivate" textWrap="true"></Label>
 </GridLayout>

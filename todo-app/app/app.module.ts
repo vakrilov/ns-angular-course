@@ -5,6 +5,7 @@ import { AppComponent } from "./app.component";
 import { TodoService } from "./todo.service";
 import { Logger } from "./logger.service";
 import { TodoComponent } from "./todo.component";
+import { MotivatorPipe } from "./motivator.pipe";
 
 @NgModule({
     schemas: [ NO_ERRORS_SCHEMA ],
@@ -16,7 +17,7 @@ import { TodoComponent } from "./todo.component";
     ],
 
     // Components, Directives, Pipes
-    declarations: [ AppComponent, TodoComponent ],
+    declarations: [ AppComponent, TodoComponent, MotivatorPipe ],
 
     // Service Providers
     providers: [ TodoService, Logger ],

@@ -4,16 +4,18 @@
     <Label text="ToDo" class="header"></Label>
 
     <!-- Add todo -->
-    <GridLayout rows="auto" columns="* auto">
+    <GridLayout rows="auto auto" columns="* auto">
         <TextField hint="Add a todo..." [(ngModel)]="currentTodo"></TextField>
 
-        <Button col="1" text="+" (tap)="addTodo()" class="add"
-            [class.add-active]="currentTodo"></Button>
+        <Button col="1" text="+" (tap)="addTodo()" class="add" [class.add-active]="currentTodo"></Button>
+
+        <Label text="Motivate me: " row="1"></Label>
+        <Switch row="1" col="1" [(ngModel)]="motivate"></Switch>
+
     </GridLayout>
 
+
     <!-- List -->
-    <td-todo *ngFor="let todo of todos" 
-        [todo]="todo"
-        (toggle)="toggleTodo($event)">
+    <td-todo *ngFor="let todo of todos" [shouldMotivate]="motivate" [todo]="todo" (toggle)="toggleTodo($event)">
     </td-todo>
 </StackLayout>

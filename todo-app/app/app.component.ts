@@ -8,6 +8,7 @@ import { TodoService } from "./todo.service";
 })
 export class AppComponent implements OnInit {
     public currentTodo: string = "";
+    public motivate: boolean;
     public todos: Todo[];
 
     constructor(private service: TodoService) {
