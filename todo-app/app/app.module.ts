@@ -3,6 +3,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { AppComponent } from "./app.component";
 import { TodoService } from "./todo.service";
+import { TodoComponent } from "./todo.component";
 
 @NgModule({
     schemas: [ NO_ERRORS_SCHEMA ],
@@ -14,10 +15,10 @@ import { TodoService } from "./todo.service";
     ],
 
     // Components, Directives, Pipes
-    declarations: [ AppComponent ],
+    declarations: [ AppComponent, TodoComponent ],
 
     // Service Providers
-    providers: [ TodoService],
+    providers: [ TodoService ],
 
     // Export components, directives and pipes
     exports: [],

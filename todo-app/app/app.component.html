@@ -11,13 +11,8 @@
     </GridLayout>
 
     <!-- List -->
-    <GridLayout *ngFor="let todo of todos" 
-        columns="auto * auto" rows="auto" 
-        [class.completed]="todo.completed" 
-        [class.pending]="!todo.completed">
-
-        <Button col="0" class="round" [text]="todo.completed ? '✓' : null" (tap)="toggleTodo(todo)"></Button>
-
-        <Label col="1" [text]="todo.text" textWrap="true"></Label>
-    </GridLayout>
+    <td-todo *ngFor="let todo of todos" 
+        [todo]="todo"
+        (toggle)="toggleTodo($event)">
+    </td-todo>
 </StackLayout>

@@ -1,0 +1,7 @@
+<GridLayout columns="auto * auto" rows="auto" 
+    [class.completed]="todo.completed" [class.pending]="!todo.completed">
+
+    <Button col="0" class="round" [text]="todo.completed ? '✓' : null" (tap)="toggle.next(todo)"></Button>
+
+    <Label col="1" [text]="todo.text" textWrap="true"></Label>
+</GridLayout>
